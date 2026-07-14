@@ -428,3 +428,6 @@ footer { background: var(--navy-deep); color: white; padding: 34px 0; }
   }
 
 }
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
