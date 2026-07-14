@@ -112,3 +112,8 @@ $("#pjbmr-contact").href = siteData.contact.pjbmr;
 const orcidLink = $("#orcid-contact");
 orcidLink.href = siteData.contact.orcid;
 orcidLink.textContent = "0000-0002-2670-6402";
+document.querySelectorAll(".flip-card").forEach(function(card) {
+  card.addEventListener("click", function() {
+    card.classList.toggle("is-flipped");
+  });
+});
