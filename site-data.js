@@ -42,7 +42,7 @@ const siteData = {
     ["Scale Validation", "Questionnaire development, reliability, EFA, CFA, psychometrics, and item analysis."],
     ["Diagnostic Accuracy", "Sensitivity, specificity, predictive values, likelihood ratios, ROC curves, and optimal cut-offs."],
     ["Scientific Writing", "Manuscript development, reviewer responses, reporting guidelines, and publication strategy."],
-    ["Research Software", "Applied training and analytical support in SPSS, R, JASP, AMOS, and publication-ready presentation of results."],
+    ["Research Software", "Applied training and analytical support in SPSS, R, DataStatPro, JASP, AMOS, and many more."],
     ["Postgraduate Supervision", "Thesis planning, research mentoring, methodological guidance, and manuscript development."],
     ["AI for Researchers", "Responsible use of AI for literature work, writing, analysis support, teaching, and workflow improvement."]
   ],
