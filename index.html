@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Academic profile of Prof. Dr. Asif Hanif — biostatistics, medical research, teaching, research consultancy, MRSCTC, and PJBMR.">
+        content="Academic profile of Prof. Dr. Asif Hanif — biostatistics, medical research, teaching, research consultancy, MRSCTC, PJBMR, and responsible AI in research.">
 
   <meta name="author"
         content="Prof. Dr. Asif Hanif">
@@ -14,7 +16,7 @@
         content="Prof. Dr. Asif Hanif | Biostatistics & Medical Research">
 
   <meta property="og:description"
-        content="Research, publications, teaching, academic leadership, MRSCTC, and PJBMR.">
+        content="Research, publications, teaching, academic leadership, MRSCTC, PJBMR, and statistical innovation.">
 
   <meta property="og:type"
         content="website">
@@ -39,8 +41,1224 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
-  <link rel="stylesheet"
-        href="style.css">
+  <style>
+
+    :root {
+      --navy: #11283a;
+      --navy-deep: #081a27;
+      --blue: #1d6f96;
+      --gold: #b78940;
+      --cream: #f8f3ea;
+      --soft: #eef4f6;
+      --white: #ffffff;
+      --ink: #17232c;
+      --muted: #61717b;
+      --line: #d8e2e6;
+      --max: 1220px;
+      --shadow: 0 18px 50px rgba(17,40,58,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+    }
+
+    .brand strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #455660;
+      font-weight: 600;
+      font-size: .84rem;
+    }
+
+    .nav a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: white !important;
+      padding: 10px 16px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          105deg,
+          var(--cream) 0%,
+          white 56%,
+          var(--soft) 100%
+        );
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat-symbols {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      opacity: .08;
+    }
+
+    .stat-symbols span {
+      position: absolute;
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      animation: floatSymbol 12s ease-in-out infinite;
+    }
+
+    .stat-symbols span:nth-child(1) {
+      left: 5%;
+      top: 14%;
+      font-size: 4rem;
+    }
+
+    .stat-symbols span:nth-child(2) {
+      left: 18%;
+      top: 72%;
+      font-size: 3rem;
+      animation-delay: -2s;
+    }
+
+    .stat-symbols span:nth-child(3) {
+      left: 42%;
+      top: 17%;
+      font-size: 2.8rem;
+      animation-delay: -5s;
+    }
+
+    .stat-symbols span:nth-child(4) {
+      left: 64%;
+      top: 68%;
+      font-size: 3.8rem;
+      animation-delay: -7s;
+    }
+
+    .stat-symbols span:nth-child(5) {
+      left: 84%;
+      top: 16%;
+      font-size: 3rem;
+      animation-delay: -4s;
+    }
+
+    .stat-symbols span:nth-child(6) {
+      left: 90%;
+      top: 72%;
+      font-size: 2.4rem;
+      animation-delay: -8s;
+    }
+
+    .stat-symbols span:nth-child(7) {
+      left: 34%;
+      top: 52%;
+      font-size: 2.3rem;
+      animation-delay: -6s;
+    }
+
+    .stat-symbols span:nth-child(8) {
+      left: 74%;
+      top: 40%;
+      font-size: 2.5rem;
+      animation-delay: -3s;
+    }
+
+    @keyframes floatSymbol {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(4deg);
+      }
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      min-height: 730px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 70px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--blue);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--navy);
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(3.8rem, 7vw, 6.8rem);
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+
+    h2 {
+      margin: 0 0 25px;
+      font-size: clamp(2.25rem, 4.2vw, 3.9rem);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+
+    .academic-title {
+      margin: 0;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 1.08rem;
+    }
+
+    .qualifications {
+      margin: 4px 0 18px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 800;
+    }
+
+    .btn.primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn.secondary {
+      border: 1px solid var(--navy);
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .profile-links a {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: .82rem;
+      text-underline-offset: 4px;
+    }
+
+    .portrait-frame {
+      background: white;
+      padding: 12px;
+      border: 1px solid var(--line);
+      box-shadow: 0 28px 70px rgba(18,40,58,.16);
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 555px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .portrait-note {
+      position: relative;
+      margin: -28px 25px 0;
+      background: var(--navy);
+      color: white;
+      padding: 22px 25px;
+    }
+
+    .portrait-note strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 1.18rem;
+    }
+
+    .portrait-note span {
+      display: block;
+      color: rgba(255,255,255,.7);
+      font-size: .78rem;
+      margin-top: 6px;
+    }
+
+    .metrics {
+      background: var(--navy);
+      color: white;
+      padding: 34px 0 17px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    .metric {
+      padding: 10px 28px 20px;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+
+    .metric:first-child {
+      padding-left: 0;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 2.35rem;
+    }
+
+    .metric span {
+      color: rgba(255,255,255,.7);
+      font-size: .8rem;
+    }
+
+    .metric-note {
+      text-align: center;
+      color: rgba(255,255,255,.55);
+      font-size: .68rem;
+      margin: 7px 0 0;
+    }
+
+    .metric-note a {
+      color: white;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .soft {
+      background: var(--soft);
+    }
+
+    .cream {
+      background: var(--cream);
+    }
+
+    .dark {
+      background: var(--navy);
+      color: white;
+    }
+
+    .dark h2 {
+      color: white;
+    }
+
+    .pale {
+      color: #a8d1e3;
+    }
+
+    .section-split {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 75px;
+    }
+
+    .section-index {
+      border-top: 2px solid var(--gold);
+      padding-top: 13px;
+    }
+
+    .section-index span {
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 2rem;
+    }
+
+    .section-index p {
+      color: var(--muted);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    .light-index p {
+      color: rgba(255,255,255,.55);
+    }
+
+    .about-grid {
+      columns: 2;
+      column-gap: 48px;
+      color: var(--muted);
+    }
+
+    .about-grid p {
+      break-inside: avoid;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading > p {
+      max-width: 360px;
+      color: var(--muted);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+    }
+
+    .dashboard-card {
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .mini-bars {
+      display: grid;
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 165px 1fr 42px;
+      align-items: center;
+      gap: 12px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .bar-track {
+      height: 9px;
+      background: #e7eef1;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--gold)
+        );
+      transform-origin: left;
+      animation: growBar 1.3s ease both;
+    }
+
+    @keyframes growBar {
+
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .research-wheel {
+      position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 1;
+      margin: 10px auto 0;
+    }
+
+    .wheel-center {
+      position: absolute;
+      inset: 35%;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-family: "Playfair Display", serif;
+      text-align: center;
+      padding: 12px;
+      z-index: 3;
+      box-shadow: 0 10px 30px rgba(17,40,58,.22);
+    }
+
+    .wheel-item {
+      position: absolute;
+      width: 110px;
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 8px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--navy);
+      font-size: .72rem;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+
+    .wheel-item:nth-child(2) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .wheel-item:nth-child(3) {
+      top: 14%;
+      right: 0;
+    }
+
+    .wheel-item:nth-child(4) {
+      top: 45%;
+      right: -8px;
+    }
+
+    .wheel-item:nth-child(5) {
+      bottom: 4%;
+      right: 14%;
+    }
+
+    .wheel-item:nth-child(6) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .wheel-item:nth-child(7) {
+      bottom: 4%;
+      left: 14%;
+    }
+
+    .wheel-item:nth-child(8) {
+      top: 45%;
+      left: -8px;
+    }
+
+    .wheel-item:nth-child(9) {
+      top: 14%;
+      left: 0;
+    }
+
+    .map-panel {
+      margin-top: 24px;
+      background:
+        linear-gradient(
+          145deg,
+          #f8fbfc,
+          #eaf2f5
+        );
+      border: 1px solid var(--line);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .world-map {
+      position: relative;
+      height: 300px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 20% 35%, rgba(29,111,150,.16) 0 8%, transparent 9%),
+        radial-gradient(circle at 48% 30%, rgba(29,111,150,.16) 0 12%, transparent 13%),
+        radial-gradient(circle at 68% 40%, rgba(29,111,150,.16) 0 11%, transparent 12%),
+        radial-gradient(circle at 82% 70%, rgba(29,111,150,.16) 0 7%, transparent 8%),
+        linear-gradient(#fff,#f3f7f8);
+      overflow: hidden;
+    }
+
+    .world-map::before,
+    .world-map::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent 0 39px,
+          rgba(17,40,58,.05) 40px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 59px,
+          rgba(17,40,58,.05) 60px
+        );
+    }
+
+    .map-point {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid white;
+      box-shadow: 0 0 0 5px rgba(183,137,64,.18);
+      z-index: 2;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    .map-point span {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .pakistan {
+      left: 62%;
+      top: 44%;
+    }
+
+    .turkiye {
+      left: 53%;
+      top: 32%;
+    }
+
+    .malaysia {
+      left: 73%;
+      top: 57%;
+    }
+
+    .saudi {
+      left: 57%;
+      top: 47%;
+    }
+
+    .uk {
+      left: 44%;
+      top: 20%;
+    }
+
+    .australia {
+      left: 82%;
+      top: 74%;
+    }
+
+    .flip-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 42px;
+    }
+
+    .flip-card {
+      position: relative;
+      height: 310px;
+      background: transparent;
+      perspective: 1200px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform .7s ease;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus .flip-card-inner,
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      inset: 0;
+      padding: 32px;
+      border: 1px solid var(--line);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      box-shadow: 0 14px 35px rgba(18,40,58,.07);
+    }
+
+    .flip-card-front {
+      background:
+        linear-gradient(
+          145deg,
+          white 0%,
+          #f1f6f8 100%
+        );
+      border-top: 4px solid var(--gold);
+    }
+
+    .flip-card-back {
+      background: var(--navy);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front h3,
+    .flip-card-back h3 {
+      margin: 28px 0 14px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
+
+    .flip-card-front h3 {
+      color: var(--navy);
+    }
+
+    .flip-card-back h3 {
+      color: white;
+    }
+
+    .flip-card-front p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .flip-card-back ul {
+      margin: 18px 0 0;
+      padding-left: 20px;
+    }
+
+    .flip-card-back li {
+      margin-bottom: 8px;
+      color: rgba(255,255,255,.82);
+      font-size: .9rem;
+    }
+
+    .flip-number {
+      color: var(--gold);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .flip-prompt {
+      position: absolute;
+      left: 32px;
+      bottom: 26px;
+      color: var(--blue);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid #cfd9de;
+      border-left: 1px solid #cfd9de;
+    }
+
+    .expertise-card {
+      min-height: 245px;
+      padding: 28px;
+      background: rgba(255,255,255,.75);
+      border-right: 1px solid #cfd9de;
+      border-bottom: 1px solid #cfd9de;
+    }
+
+    .expertise-card .number {
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 800;
+    }
+
+    .expertise-card h3 {
+      margin: 28px 0 12px;
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+    }
+
+    .expertise-card p {
+      color: var(--muted);
+      font-size: .88rem;
+      margin: 0;
+    }
+
+    .publication-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 35px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .publication .year {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+    }
+
+    .publication .type {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      font-size: .68rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .publication h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.28rem;
+    }
+
+    .publication p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .leadership-card {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      gap: 24px;
+      background: white;
+      border-top: 4px solid var(--gold);
+      padding: 36px;
+      box-shadow: 0 14px 35px rgba(18,40,58,.07);
+    }
+
+    .leadership-mark {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+    }
+
+    .leadership-card h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+    }
+
+    .leadership-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .leadership-card a {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .journey {
+      position: relative;
+      margin-top: 40px;
+      padding-left: 28px;
+    }
+
+    .journey::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 7px;
+      width: 2px;
+      background: rgba(255,255,255,.2);
+    }
+
+    .journey-item {
+      position: relative;
+      padding: 0 0 28px 28px;
+    }
+
+    .journey-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--navy);
+    }
+
+    .journey-item time {
+      color: #d4ab68;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .journey-item h3 {
+      margin: 4px 0 5px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+    }
+
+    .journey-item p {
+      margin: 0;
+      color: rgba(255,255,255,.66);
+      font-size: .88rem;
+    }
+
+    .teaching-card {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 65px;
+      border: 1px solid var(--line);
+      border-left: 7px solid var(--gold);
+      padding: 52px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 10px;
+    }
+
+    .tag-cloud span {
+      border: 1px solid var(--line);
+      padding: 9px 12px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .contact-section {
+      background: var(--soft);
+      padding: 90px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-grid > div:first-child > p:last-child {
+      color: var(--muted);
+    }
+
+    .contact-card {
+      background: white;
+      border-top: 4px solid var(--blue);
+      padding: 34px;
+      box-shadow: 0 15px 40px rgba(18,40,58,.08);
+    }
+
+    .contact-card p {
+      margin: 0 0 21px;
+      color: var(--muted);
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-card strong {
+      color: var(--navy);
+    }
+
+    .contact-card a {
+      color: var(--blue);
+    }
+
+    footer {
+      background: var(--navy-deep);
+      color: white;
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .footer-inner p {
+      margin: 3px 0 0;
+      color: rgba(255,255,255,.55);
+      font-size: .78rem;
+    }
+
+    @media (max-width: 930px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .hero-grid,
+      .dashboard-grid,
+      .leadership-grid,
+      .teaching-card,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-wrap {
+        max-width: 650px;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .metric:nth-child(2) {
+        border-right: 0;
+      }
+
+      .section-split {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .expertise-grid,
+      .flip-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      h1 {
+        font-size: 3.55rem;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        padding: 55px 0;
+      }
+
+      .portrait-frame img {
+        height: 455px;
+      }
+
+      .portrait-note {
+        margin: -18px 12px 0;
+      }
+
+      .metric-grid,
+      .expertise-grid,
+      .flip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        padding-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.15);
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .about-grid {
+        columns: 1;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .leadership-card {
+        grid-template-columns: 1fr;
+        padding: 28px;
+      }
+
+      .teaching-card {
+        padding: 32px 25px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .bar-row {
+        grid-template-columns: 115px 1fr 35px;
+      }
+
+      .world-map {
+        height: 260px;
+      }
+
+      .research-wheel {
+        transform: scale(.86);
+        transform-origin: center;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
@@ -84,6 +1302,10 @@
           About
         </a>
 
+        <a href="#dashboard">
+          Dashboard
+        </a>
+
         <a href="#highlights">
           Highlights
         </a>
@@ -100,8 +1322,8 @@
           Leadership
         </a>
 
-        <a href="#news">
-          News
+        <a href="#journey">
+          Journey
         </a>
 
         <a href="#contact"
@@ -119,37 +1341,68 @@
   <main>
 
 
-    <!-- HERO -->
-
     <section class="hero"
              id="home">
 
+
+      <div class="stat-symbols"
+           aria-hidden="true">
+
+        <span>β</span>
+        <span>Σ</span>
+        <span>μ</span>
+        <span>σ</span>
+        <span>χ²</span>
+        <span>R²</span>
+        <span>CI</span>
+        <span>OR</span>
+
+      </div>
+
+
       <div class="container hero-grid">
 
+
         <div class="hero-copy">
+
 
           <p class="eyebrow">
             Professor • Biostatistician • Medical Researcher
           </p>
+
 
           <h1>
             Prof. Dr.<br>
             Asif Hanif
           </h1>
 
+
           <p class="academic-title">
             Professor of Biostatistics and Medical Statistics
           </p>
 
+
           <p class="qualifications">
+
             PhD Medical Statistics, Malaysia •
-            PhD Statistics (Specialization in Biostatistics), Pakistan •
+
+            PhD Statistics
+            (Specialization in Biostatistics), Pakistan •
+
             MS •
+
             MSc Biostatistics, Pakistan
+
           </p>
 
-          <p class="lead"
-             id="hero-summary">
+
+          <p class="lead">
+
+            Advancing health research through rigorous study design,
+            responsible statistical analysis, scientific communication,
+            postgraduate mentorship, and ethical applications of
+            artificial intelligence.
+
           </p>
 
 
@@ -157,25 +1410,84 @@
 
             <a class="btn primary"
                href="#publications">
+
               Explore academic work
+
             </a>
+
 
             <a class="btn secondary"
                href="#contact">
+
               Academic collaboration
+
             </a>
 
           </div>
 
 
-          <div class="profile-links"
-               id="profile-links">
+          <div class="profile-links">
+
+            <a href="https://scholar.google.com.pk/citations?user=dnJ5sJ8AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener">
+
+              Google Scholar
+
+            </a>
+
+
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=55360052800"
+               target="_blank"
+               rel="noopener">
+
+              Scopus
+
+            </a>
+
+
+            <a href="https://www.webofscience.com/wos/author/record/AAL-2249-2020"
+               target="_blank"
+               rel="noopener">
+
+              Web of Science
+
+            </a>
+
+
+            <a href="https://orcid.org/0000-0002-2670-6402"
+               target="_blank"
+               rel="noopener">
+
+              ORCID
+
+            </a>
+
+
+            <a href="https://www.researchgate.net/profile/Asif-Hanif-4?ev=hdr_xprf"
+               target="_blank"
+               rel="noopener">
+
+              ResearchGate
+
+            </a>
+
+
+            <a href="https://www.facebook.com/profdrasifhanif/"
+               target="_blank"
+               rel="noopener">
+
+              Facebook
+
+            </a>
+
           </div>
 
         </div>
 
 
         <aside class="portrait-wrap">
+
 
           <div class="portrait-frame">
 
@@ -192,8 +1504,10 @@
             </strong>
 
             <span>
+
               Biostatistics, clinical research, evidence synthesis,
               research education, and responsible AI.
+
             </span>
 
           </div>
@@ -205,38 +1519,101 @@
     </section>
 
 
-    <!-- METRICS -->
-
     <section class="metrics"
              id="impact">
 
-      <div class="container metric-grid"
-           id="metric-grid">
+      <div class="container metric-grid">
+
+
+        <div class="metric">
+
+          <strong class="counter"
+                  data-target="364"
+                  data-suffix="+">
+
+            364+
+
+          </strong>
+
+          <span>
+            Research publications
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong class="counter"
+                  data-target="59123">
+
+            59,123
+
+          </strong>
+
+          <span>
+            Google Scholar citations
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong class="counter"
+                  data-target="47">
+
+            47
+
+          </strong>
+
+          <span>
+            Google Scholar h-index
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong class="counter"
+                  data-target="95">
+
+            95
+
+          </strong>
+
+          <span>
+            Google Scholar i10-index
+          </span>
+
+        </div>
+
       </div>
+
 
       <p class="metric-note">
 
-        Metrics should be periodically verified against
+        Google Scholar metrics verified: July 2026.
 
-        <a id="metric-source"
+        <a href="https://scholar.google.com.pk/citations?user=dnJ5sJ8AAAAJ&hl=en"
            target="_blank"
            rel="noopener">
-          Google Scholar
-        </a>.
 
-        <span id="metric-updated"></span>
+          View profile
+
+        </a>
 
       </p>
 
     </section>
 
 
-    <!-- ABOUT -->
-
     <section class="section"
              id="about">
 
       <div class="container section-split">
+
 
         <div class="section-index">
 
@@ -261,8 +1638,47 @@
             Connecting Biostatistics with meaningful health research
           </h2>
 
-          <div class="about-grid"
-               id="about-content">
+
+          <div class="about-grid">
+
+            <p>
+
+              I am a professor and consultant in biostatistics and
+              medical research with extensive experience in study design,
+              statistical analysis, postgraduate supervision,
+              scientific writing, and professional research training.
+
+            </p>
+
+
+            <p>
+
+              My work focuses on helping clinicians, public-health
+              professionals, postgraduate researchers, and academic
+              institutions conduct scientifically rigorous, transparent,
+              reproducible, and publication-ready research.
+
+            </p>
+
+
+            <p>
+
+              I have contributed to multidisciplinary scholarship across
+              medicine, public health, dentistry, rehabilitation,
+              epidemiology, allied health sciences, and medical education.
+
+            </p>
+
+
+            <p>
+
+              A growing part of my academic work examines practical
+              and ethical applications of artificial intelligence in
+              research education, scientific writing, statistical analysis,
+              and evidence synthesis.
+
+            </p>
+
           </div>
 
         </div>
@@ -272,12 +1688,300 @@
     </section>
 
 
-    <!-- FLIP CARDS -->
+    <section class="section soft"
+             id="dashboard">
 
-    <section class="section flip-section"
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <p class="eyebrow">
+              Statistical identity
+            </p>
+
+            <h2>
+              Research dashboard
+            </h2>
+
+          </div>
+
+
+          <p>
+
+            A visual summary of the methods and analytical areas
+            that define my academic work.
+
+          </p>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+
+          <div class="dashboard-card">
+
+            <p class="eyebrow">
+              Methodological portfolio
+            </p>
+
+            <h3>
+              Selected analytical strengths
+            </h3>
+
+
+            <div class="mini-bars">
+
+
+              <div class="bar-row">
+
+                <span>
+                  Biostatistics
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:96%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  96
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Research Methodology
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:94%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  94
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Meta-analysis
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:90%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  90
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Clinical Research
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:88%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  88
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Psychometrics
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:86%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  86
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  AI for Researchers
+                </span>
+
+                <div class="bar-track">
+
+                  <div class="bar-fill"
+                       style="width:84%">
+                  </div>
+
+                </div>
+
+                <strong>
+                  84
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="dashboard-card">
+
+            <p class="eyebrow">
+              Research methods wheel
+            </p>
+
+
+            <div class="research-wheel">
+
+              <div class="wheel-center">
+                Biostatistics
+              </div>
+
+              <div class="wheel-item">
+                RCTs
+              </div>
+
+              <div class="wheel-item">
+                Meta-analysis
+              </div>
+
+              <div class="wheel-item">
+                Regression
+              </div>
+
+              <div class="wheel-item">
+                CFA / SEM
+              </div>
+
+              <div class="wheel-item">
+                Diagnostic Accuracy
+              </div>
+
+              <div class="wheel-item">
+                Survival Analysis
+              </div>
+
+              <div class="wheel-item">
+                Psychometrics
+              </div>
+
+              <div class="wheel-item">
+                Epidemiology
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-panel">
+
+
+          <div class="section-heading">
+
+            <div>
+
+              <p class="eyebrow">
+                International academic footprint
+              </p>
+
+              <h3>
+
+                Selected countries connected with my research,
+                training, and academic journey
+
+              </h3>
+
+            </div>
+
+          </div>
+
+
+          <div class="world-map"
+               aria-label="Stylized world collaboration map">
+
+            <div class="map-point pakistan">
+              <span>Pakistan</span>
+            </div>
+
+            <div class="map-point turkiye">
+              <span>Türkiye</span>
+            </div>
+
+            <div class="map-point malaysia">
+              <span>Malaysia</span>
+            </div>
+
+            <div class="map-point saudi">
+              <span>Saudi Arabia</span>
+            </div>
+
+            <div class="map-point uk">
+              <span>United Kingdom</span>
+            </div>
+
+            <div class="map-point australia">
+              <span>Australia</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section"
              id="highlights">
 
       <div class="container">
+
 
         <div class="section-heading">
 
@@ -293,8 +1997,9 @@
 
           </div>
 
+
           <p>
-            Hover over a card on desktop or tap it on mobile to view additional details.
+            Hover on desktop or tap on mobile to view details.
           </p>
 
         </div>
@@ -302,8 +2007,6 @@
 
         <div class="flip-grid">
 
-
-          <!-- CARD 1 -->
 
           <article class="flip-card"
                    tabindex="0">
@@ -321,8 +2024,10 @@
                 </h3>
 
                 <p>
+
                   Advanced academic training in statistics,
                   biostatistics, and medical statistics.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -369,8 +2074,6 @@
           </article>
 
 
-          <!-- CARD 2 -->
-
           <article class="flip-card"
                    tabindex="0">
 
@@ -387,8 +2090,10 @@
                 </h3>
 
                 <p>
+
                   Methodological expertise from study conception
                   to publication-ready evidence.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -439,8 +2144,6 @@
           </article>
 
 
-          <!-- CARD 3 -->
-
           <article class="flip-card"
                    tabindex="0">
 
@@ -457,8 +2160,10 @@
                 </h3>
 
                 <p>
-                  Applied statistical analysis,
-                  modelling, interpretation, and reporting.
+
+                  Applied statistical analysis, modelling,
+                  interpretation, and reporting.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -493,11 +2198,11 @@
                   </li>
 
                   <li>
-                    Meta-analysis software
+                    DataStatPro
                   </li>
 
                   <li>
-                    DataStatPro
+                    Meta-analysis software
                   </li>
 
                 </ul>
@@ -508,8 +2213,6 @@
 
           </article>
 
-
-          <!-- CARD 4 -->
 
           <article class="flip-card"
                    tabindex="0">
@@ -527,8 +2230,10 @@
                 </h3>
 
                 <p>
+
                   Leadership in research training,
                   mentorship, and scholarly publishing.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -575,8 +2280,6 @@
           </article>
 
 
-          <!-- CARD 5 -->
-
           <article class="flip-card"
                    tabindex="0">
 
@@ -593,8 +2296,10 @@
                 </h3>
 
                 <p>
-                  Academic communication,
-                  manuscript development, and publication strategy.
+
+                  Academic communication, manuscript development,
+                  and publication strategy.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -641,8 +2346,6 @@
           </article>
 
 
-          <!-- CARD 6 -->
-
           <article class="flip-card"
                    tabindex="0">
 
@@ -659,8 +2362,10 @@
                 </h3>
 
                 <p>
+
                   Responsible applications of artificial intelligence
-                  in academic and research workflows.
+                  in research workflows.
+
                 </p>
 
                 <span class="flip-prompt">
@@ -713,12 +2418,11 @@
     </section>
 
 
-    <!-- EXPERTISE -->
-
     <section class="section soft"
              id="expertise">
 
       <div class="container">
+
 
         <div class="section-heading">
 
@@ -734,16 +2438,259 @@
 
           </div>
 
+
           <p>
+
             Methodological support from research question
             to publication-ready evidence.
+
           </p>
 
         </div>
 
 
-        <div class="expertise-grid"
-             id="expertise-grid">
+        <div class="expertise-grid">
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              01
+            </span>
+
+            <h3>
+              Biostatistics
+            </h3>
+
+            <p>
+
+              Statistical planning, modelling, interpretation,
+              and publication-ready reporting.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              02
+            </span>
+
+            <h3>
+              Research Methodology
+            </h3>
+
+            <p>
+
+              Research questions, study designs, protocols,
+              sampling, measurement, and methodological review.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              03
+            </span>
+
+            <h3>
+              Clinical Research
+            </h3>
+
+            <p>
+
+              Randomized trials, diagnostic studies, interventions,
+              clinical outcomes research, and protocol development.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              04
+            </span>
+
+            <h3>
+              Epidemiology & Public Health
+            </h3>
+
+            <p>
+
+              Cross-sectional, case-control, cohort, surveillance,
+              and population-based health research.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              05
+            </span>
+
+            <h3>
+              Evidence Synthesis
+            </h3>
+
+            <p>
+
+              Systematic reviews, meta-analysis, meta-regression,
+              risk-of-bias assessment, and PRISMA reporting.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              06
+            </span>
+
+            <h3>
+              Statistical Modelling
+            </h3>
+
+            <p>
+
+              Linear, logistic, ordinal, count, survival,
+              repeated-measures, multilevel, and multivariable models.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              07
+            </span>
+
+            <h3>
+              Scale Development & Validation
+            </h3>
+
+            <p>
+
+              Questionnaire development, reliability, EFA, CFA,
+              psychometrics, and item analysis.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              08
+            </span>
+
+            <h3>
+              Diagnostic Accuracy
+            </h3>
+
+            <p>
+
+              Sensitivity, specificity, predictive values,
+              likelihood ratios, ROC curves, and optimal cut-offs.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              09
+            </span>
+
+            <h3>
+              Scientific Writing
+            </h3>
+
+            <p>
+
+              Manuscript development, reviewer responses,
+              reporting guidelines, and publication strategy.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              10
+            </span>
+
+            <h3>
+              Research Software
+            </h3>
+
+            <p>
+
+              Applied support using SPSS, R, JASP, AMOS,
+              DataStatPro, and other research software.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              11
+            </span>
+
+            <h3>
+              Postgraduate Supervision
+            </h3>
+
+            <p>
+
+              Thesis planning, research mentoring,
+              methodological guidance, and manuscript development.
+
+            </p>
+
+          </article>
+
+
+          <article class="expertise-card">
+
+            <span class="number">
+              12
+            </span>
+
+            <h3>
+              AI for Researchers
+            </h3>
+
+            <p>
+
+              Responsible use of AI for literature work, writing,
+              analysis support, teaching, and workflow improvement.
+
+            </p>
+
+          </article>
+
         </div>
 
       </div>
@@ -751,12 +2698,11 @@
     </section>
 
 
-    <!-- PUBLICATIONS -->
-
     <section class="section"
              id="publications">
 
       <div class="container">
+
 
         <div class="section-heading">
 
@@ -774,7 +2720,7 @@
 
 
           <a class="text-link"
-             id="all-publications"
+             href="https://scholar.google.com.pk/citations?user=dnJ5sJ8AAAAJ&hl=en"
              target="_blank"
              rel="noopener">
 
@@ -785,8 +2731,149 @@
         </div>
 
 
-        <div class="publication-list"
-             id="publication-list">
+        <div class="publication-list">
+
+
+          <article class="publication">
+
+            <div class="year">
+              2026
+            </div>
+
+            <div>
+
+              <p class="type">
+                Clinical review
+              </p>
+
+              <h3>
+
+                Updated perspectives on vitamin D deficiency,
+                screening, supplementation and clinical guidance
+
+              </h3>
+
+              <p>
+                International collaborative publication
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="publication">
+
+            <div class="year">
+              2026
+            </div>
+
+            <div>
+
+              <p class="type">
+                Randomized controlled trial
+              </p>
+
+              <h3>
+
+                Effectiveness of vitamin C and D supplementation
+                as an adjunct in the management of gingivitis
+                in school-going children
+
+              </h3>
+
+              <p>
+                BMC Public Health
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="publication">
+
+            <div class="year">
+              2026
+            </div>
+
+            <div>
+
+              <p class="type">
+                Narrative review
+              </p>
+
+              <h3>
+
+                A global health alert on the re-emergence of mpox:
+                prevention and management
+
+              </h3>
+
+              <p>
+                Health Science Reports
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="publication">
+
+            <div class="year">
+              2026
+            </div>
+
+            <div>
+
+              <p class="type">
+                Systematic review and meta-analysis
+              </p>
+
+              <h3>
+
+                Ultrasound elastography for the assessment
+                of liver fibrosis
+
+              </h3>
+
+              <p>
+                Journal of Diagnostic Medical Sonography
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="publication">
+
+            <div class="year">
+              2026
+            </div>
+
+            <div>
+
+              <p class="type">
+                Population-based analysis
+              </p>
+
+              <h3>
+
+                Modelling maternal factors affecting children
+                ever born in Punjab, Pakistan
+
+              </h3>
+
+              <p>
+                American Journal of Human Biology
+              </p>
+
+            </div>
+
+          </article>
+
         </div>
 
       </div>
@@ -794,12 +2881,11 @@
     </section>
 
 
-    <!-- LEADERSHIP -->
-
     <section class="section cream"
              id="leadership">
 
       <div class="container">
+
 
         <div class="section-heading">
 
@@ -818,8 +2904,88 @@
         </div>
 
 
-        <div class="leadership-grid"
-             id="leadership-grid">
+        <div class="leadership-grid">
+
+
+          <article class="leadership-card">
+
+            <div class="leadership-mark">
+              M
+            </div>
+
+            <div>
+
+              <p class="eyebrow">
+                Founder and academic initiative
+              </p>
+
+              <h3>
+
+                Medical Research and Statistical
+                Consultancy Training Centre
+
+              </h3>
+
+              <p>
+
+                MRSCTC supports researchers through research-methodology
+                guidance, biostatistical consultancy, scientific writing,
+                workshops, mentoring, and professional capacity building.
+
+              </p>
+
+              <a href="https://www.mrsctc.com"
+                 target="_blank"
+                 rel="noopener">
+
+                Visit MRSCTC →
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="leadership-card">
+
+            <div class="leadership-mark">
+              P
+            </div>
+
+            <div>
+
+              <p class="eyebrow">
+                Editor-in-Chief
+              </p>
+
+              <h3>
+
+                Pioneer Journal of Biostatistics
+                and Medical Research
+
+              </h3>
+
+              <p>
+
+                PJBMR promotes ethical, transparent, methodologically
+                sound, and accessible scholarship in biostatistics,
+                medicine, public health, and allied health sciences.
+
+              </p>
+
+              <a href="https://www.pjbmr.com"
+                 target="_blank"
+                 rel="noopener">
+
+                Visit PJBMR →
+
+              </a>
+
+            </div>
+
+          </article>
+
         </div>
 
       </div>
@@ -827,12 +2993,11 @@
     </section>
 
 
-    <!-- NEWS -->
-
     <section class="section dark"
-             id="news">
+             id="journey">
 
       <div class="container section-split">
+
 
         <div class="section-index light-index">
 
@@ -841,7 +3006,7 @@
           </span>
 
           <p>
-            Recent activity
+            Academic journey
           </p>
 
         </div>
@@ -850,15 +3015,116 @@
         <div>
 
           <p class="eyebrow pale">
-            News and achievements
+            Qualifications and progression
           </p>
 
           <h2>
-            Recent academic highlights
+            Research journey
           </h2>
 
-          <div class="news-list"
-               id="news-list">
+
+          <div class="journey">
+
+
+            <div class="journey-item">
+
+              <time>
+                2006
+              </time>
+
+              <h3>
+                MSc Biostatistics
+              </h3>
+
+              <p>
+
+                Formal postgraduate training in biostatistics
+                and applied health research.
+
+              </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+              <time>
+                2011
+              </time>
+
+              <h3>
+                MS / Advanced statistical training
+              </h3>
+
+              <p>
+
+                Advanced statistical methods and applied
+                research development.
+
+              </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+              <time>
+                2018
+              </time>
+
+              <h3>
+                PhD Statistics
+              </h3>
+
+              <p>
+                Specialization in Biostatistics.
+              </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+              <time>
+                2024
+              </time>
+
+              <h3>
+                PhD Medical Statistics, Malaysia
+              </h3>
+
+              <p>
+
+                Advanced methodological training in medical
+                and health statistics.
+
+              </p>
+
+            </div>
+
+
+            <div class="journey-item">
+
+              <time>
+                Present
+              </time>
+
+              <h3>
+
+                Professor, Research Mentor,
+                and Academic Leader
+
+              </h3>
+
+              <p>
+
+                Biostatistics, medical research, postgraduate
+                supervision, MRSCTC, and PJBMR.
+
+              </p>
+
+            </div>
+
           </div>
 
         </div>
@@ -868,12 +3134,11 @@
     </section>
 
 
-    <!-- TEACHING -->
-
     <section class="section"
              id="teaching">
 
       <div class="container teaching-card">
+
 
         <div>
 
@@ -882,14 +3147,61 @@
           </p>
 
           <h2>
-            Making advanced research methods understandable and usable
+
+            Making advanced research methods
+            understandable and usable
+
           </h2>
 
         </div>
 
 
-        <div class="tag-cloud"
-             id="teaching-tags">
+        <div class="tag-cloud">
+
+          <span>
+            Postgraduate supervision
+          </span>
+
+          <span>
+            Biostatistics workshops
+          </span>
+
+          <span>
+            Research methodology
+          </span>
+
+          <span>
+            SPSS and R
+          </span>
+
+          <span>
+            JASP and AMOS
+          </span>
+
+          <span>
+            DataStatPro
+          </span>
+
+          <span>
+            Systematic review and meta-analysis
+          </span>
+
+          <span>
+            Scientific writing
+          </span>
+
+          <span>
+            Questionnaire validation
+          </span>
+
+          <span>
+            Diagnostic accuracy and ROC analysis
+          </span>
+
+          <span>
+            Responsible AI for researchers
+          </span>
+
         </div>
 
       </div>
@@ -897,12 +3209,11 @@
     </section>
 
 
-    <!-- CONTACT -->
-
     <section class="contact-section"
              id="contact">
 
       <div class="container contact-grid">
+
 
         <div>
 
@@ -911,20 +3222,25 @@
           </p>
 
           <h2>
+
             Academic collaboration, research consultation,
             and institutional training
+
           </h2>
 
           <p>
+
             For collaborations, workshops, postgraduate mentorship,
             methodological consultation, editorial initiatives,
             and institutional capacity development.
+
           </p>
 
         </div>
 
 
         <div class="contact-card">
+
 
           <p>
 
@@ -934,7 +3250,10 @@
 
             <br>
 
-            <a id="contact-email">
+            <a href="mailto:info@pjbmr.com">
+
+              info@pjbmr.com
+
             </a>
 
           </p>
@@ -948,7 +3267,7 @@
 
             <br>
 
-            <a id="mrsctc-contact"
+            <a href="https://www.mrsctc.com"
                target="_blank"
                rel="noopener">
 
@@ -967,7 +3286,7 @@
 
             <br>
 
-            <a id="pjbmr-contact"
+            <a href="https://www.pjbmr.com"
                target="_blank"
                rel="noopener">
 
@@ -986,9 +3305,12 @@
 
             <br>
 
-            <a id="orcid-contact"
+            <a href="https://orcid.org/0000-0002-2670-6402"
                target="_blank"
                rel="noopener">
+
+              0000-0002-2670-6402
+
             </a>
 
           </p>
@@ -1006,6 +3328,7 @@
 
     <div class="container footer-inner">
 
+
       <div>
 
         <strong>
@@ -1020,8 +3343,10 @@
 
 
       <p>
+
         © <span id="year"></span>
         All rights reserved.
+
       </p>
 
     </div>
@@ -1029,9 +3354,168 @@
   </footer>
 
 
-  <script src="site-data.js"></script>
+  <script>
 
-  <script src="script.js"></script>
+    const menuButton =
+      document.querySelector(".menu-toggle");
+
+    const nav =
+      document.querySelector(".nav");
+
+
+    menuButton.addEventListener("click", () => {
+
+      const open =
+        nav.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+    });
+
+
+    document
+      .querySelectorAll(".nav a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          nav.classList.remove("open");
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    const counters =
+      document.querySelectorAll(".counter");
+
+
+    const animateCounter = element => {
+
+      const target =
+        Number(element.dataset.target);
+
+      const suffix =
+        element.dataset.suffix || "";
+
+      const duration =
+        1200;
+
+      const start =
+        performance.now();
+
+
+      const update = now => {
+
+        const progress =
+          Math.min(
+            (now - start) / duration,
+            1
+          );
+
+        const eased =
+          1 - Math.pow(1 - progress, 3);
+
+        const value =
+          Math.floor(target * eased);
+
+
+        element.textContent =
+          value.toLocaleString("en-US") + suffix;
+
+
+        if (progress < 1) {
+
+          requestAnimationFrame(update);
+
+        }
+
+      };
+
+
+      requestAnimationFrame(update);
+
+    };
+
+
+    const counterObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              animateCounter(entry.target);
+
+              counterObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: .55
+        }
+      );
+
+
+    counters.forEach(counter => {
+
+      counterObserver.observe(counter);
+
+    });
+
+
+    document
+      .querySelectorAll(".flip-card")
+      .forEach(card => {
+
+        card.addEventListener("click", () => {
+
+          card.classList.toggle("flipped");
+
+        });
+
+
+        card.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+
+              event.preventDefault();
+
+              card.classList.toggle(
+                "flipped"
+              );
+
+            }
+
+          }
+        );
+
+      });
+
+  </script>
 
 </body>
 </html>
