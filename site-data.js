@@ -98,14 +98,7 @@ const siteData = {
       linkText: "Visit PJBMR →",
       url: "https://www.pjbmr.com"
     },
-    {
-      mark: "D",
-      role: "Research software initiative",
-      title: "DataStatPro",
-      description: "DataStatPro is a research-oriented statistical initiative designed to make analysis, interpretation, and publication-ready reporting more accessible, with workflows informed by established platforms including JASP and AMOS.",
-      linkText: "Learn more through MRSCTC →",
-      url: "https://www.mrsctc.com"
-    }
+    
   ],
 
   news: [
