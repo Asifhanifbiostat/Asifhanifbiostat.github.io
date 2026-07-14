@@ -1,76 +1,65 @@
-# Prof. Dr. Asif Hanif — GitHub Pages Website
+# Rebuilt Academic Website
 
-This folder contains a complete starter website for:
+## Replace your current GitHub Pages website
 
-https://asifhanifbiostat.github.io
+Upload these files to the root of:
 
-## Important requirement
+`Asifhanifbiostat.github.io`
 
-To use exactly `Asifhanifbiostat.github.io`, your GitHub username must be:
+Files:
 
-`Asifhanifbiostat`
+- index.html
+- style.css
+- script.js
+- site-data.js
+- asifhanif.jpg
+- .nojekyll
 
-If that username is unavailable, the free address will use your actual GitHub username, for example:
+You can delete the old duplicate image files:
 
-`yourusername.github.io`
+- Asifhanif.png
+- asifhanif.png
 
-## Publishing steps
+The new website uses only:
 
-1. Create a free GitHub account and verify your email.
-2. Create a new **public** repository named exactly:
-   `Asifhanifbiostat.github.io`
-3. Upload all files in this folder to the root of that repository:
-   - index.html
-   - style.css
-   - script.js
-   - .nojekyll
-4. Open the repository's **Settings**.
-5. Select **Pages**.
-6. Under **Build and deployment**, choose:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: /(root)
-7. Save.
-8. Open `https://asifhanifbiostat.github.io` after deployment completes.
+`asifhanif.jpg`
 
-## Before publishing
+## Easy future editing
 
-Edit `index.html` and replace:
+For most updates, edit only:
 
-- `YOUR-EMAIL@example.com`
-- Profile links have already been added for Google Scholar, Web of Science, Scopus, ORCID, ResearchGate, and Facebook.
-- Placeholder photograph
-- Publication entries and metrics, if needed
+`site-data.js`
 
-## Adding a photograph
+That file contains:
 
-1. Add a professional photograph named `profile.jpg` to the repository.
-2. In `index.html`, replace:
+- Google Scholar metrics
+- biography
+- academic profile links
+- expertise
+- publications
+- recent news
+- teaching topics
+- email and website links
 
-```html
-<div class="photo-placeholder">
-  <span>Add professional photograph</span>
-</div>
-```
+## Research metrics
 
-with:
+Google Scholar does not provide a supported live browser API for GitHub Pages. Therefore, the site does not falsely claim live automatic updating. Check your profile periodically and update the four metric values in `site-data.js`.
 
-```html
-<img class="profile-photo" src="profile.jpg" alt="Prof. Dr. Asif Hanif">
-```
+## Publishing
 
-3. Add this to `style.css`:
+1. Open the GitHub repository.
+2. Use **Add file → Upload files**.
+3. Upload all files from this folder.
+4. Commit changes.
+5. Under **Settings → Pages**, use the `main` branch and `/(root)`.
+6. Refresh the website using Ctrl + F5.
 
-```css
-.profile-photo {
-  width: 100%;
-  aspect-ratio: 4/4.5;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-}
-```
 
-## Ownership and security
+## July 2026 update
 
-Create the GitHub account using your own email address. Keep two-factor authentication enabled. A developer may be added as a collaborator, but you should remain the account and repository owner.
+- Google Scholar citations: 59,123
+- Google Scholar h-index: 47
+- Google Scholar i10-index: 95
+- Research publications displayed: 364+
+- Qualifications added below the professorial title
+- DataStatPro added, with JASP and AMOS included in research-software expertise
