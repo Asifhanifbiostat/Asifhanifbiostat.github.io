@@ -293,3 +293,138 @@ footer { background: var(--navy-deep); color: white; padding: 34px 0; }
   .teaching-card { padding: 32px 25px; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
+/* =========================
+   FLIP CARD SECTION
+========================= */
+
+.flip-section {
+  background: #ffffff;
+}
+
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 42px;
+}
+
+.flip-card {
+  position: relative;
+  height: 310px;
+  background: transparent;
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  border: 1px solid var(--line);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 14px 35px rgba(18, 40, 58, 0.07);
+}
+
+.flip-card-front {
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f1f6f8 100%
+  );
+  border-top: 4px solid var(--gold);
+}
+
+.flip-card-back {
+  background: var(--navy);
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h3,
+.flip-card-back h3 {
+  margin: 28px 0 14px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.flip-card-front h3 {
+  color: var(--navy);
+}
+
+.flip-card-back h3 {
+  color: #ffffff;
+}
+
+.flip-card-front p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.flip-card-back ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
+.flip-card-back li {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+}
+
+.flip-number {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.flip-prompt {
+  position: absolute;
+  left: 32px;
+  bottom: 26px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.flip-card:focus {
+  outline: 3px solid rgba(23, 107, 144, 0.25);
+  outline-offset: 4px;
+}
+
+@media (max-width: 930px) {
+
+  .flip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 620px) {
+
+  .flip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flip-card {
+    height: 295px;
+  }
+
+}
